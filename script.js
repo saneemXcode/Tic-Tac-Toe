@@ -124,7 +124,7 @@ resultBox.classList.add("show");
                 resultBox.classList.add("show");
                         },700);//700 ms delay
               
-                 wonText.textContent=` MAtch has been Draw!`;
+                 wonText.textContent=` Match has been Draw!`;
         }
     }
  }
