@@ -1,54 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-body{
+
+body {
     background: #156a94;
 }
-.select-box, .play-board, .result-box{
+
+.select-box, .play-board, .result-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all 0.3s ease;
 }
-.select-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+
+.select-box {
     background: #c9d5e0;
     padding: 20px 25px 25px;
     border-radius: 5px;
     max-width: 330px;
     width: 100%;
-    box-shadow: 45px 45px 45px -15px rgba(0,0,0,0.15),inset 15px 15px 15px rgba(255,255,255,0.75),-9px -9px 76px rgba(255,255,255,0.55),inset -2px -2px 15px rgba(0,0,0,0.2);
-
-
+    box-shadow: 45px 45px 45px -15px rgba(0, 0, 0, 0.15), inset 15px 15px 15px rgba(255, 255, 255, 0.75), -9px -9px 76px rgba(255, 255, 255, 0.55), inset -2px -2px 15px rgba(0, 0, 0, 0.2);
 }
-.select-box.hide{
+
+.select-box.hide {
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%,-50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
 }
-.select-box header{
+
+.select-box header {
     font-size: 23px;
     font-weight: 600;
     padding-bottom: 10px;
     border-bottom: 1px solid #000000;
 }
-.select-box .title{
+
+.select-box .title {
     font-size: 18px;
     font-weight: 500;
     margin: 20px 0;
 }
-.select-box .option{
+
+.select-box .option {
     display: flex;
     width: 100%;
 }
-.option button{
+
+.option button {
     width: 100%;
     font-size: 18px;
     font-weight: 500;
@@ -61,39 +63,45 @@ body{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.option button:hover,.result-box .btn button:hover{
+
+.option button:hover, .result-box .btn button:hover {
     transform: scale(0.96);
 }
-.option button.playerx{
+
+.option button.playerx {
     margin-right: 5px;
 }
-.option button.playerx{
+
+.option button.playero {
     margin-left: 5px;
 }
-.play-board{
-        opacity: 0;
-        pointer-events: none;
-        transform: translate(-50%,-50%) scale(0.9);
+
+.play-board {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
-.play-board.show{
+
+.play-board.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
 }
-.play-board .details{
+
+.play-board .details {
     background: #fff;
     padding: 7px;
     border-radius: 5px;
 }
-.play-board .details .players{
+
+.play-board .details .players {
     display: flex;
     width: 100%;
     position: relative;
     justify-content: space-between;
-
-
 }
-.play-board .details span{
+
+.play-board .details span {
     color: #56baed;
     width: 100%;
     border-radius: 5px;
@@ -105,13 +113,13 @@ body{
     position: relative;
     z-index: 5;
     transition: all 0.3s ease;
-
 }
-.details span:first-child{
+
+.details span:first-child {
     color: #fff;
-
 }
-.details .slider{
+
+.details .slider {
     position: absolute;
     top: 0;
     left: 0;
@@ -121,27 +129,29 @@ body{
     border-radius: 5px;
     z-index: 2;
     transition: all 0.3s ease;
-
-
 }
-.players.active span:first-child{
+
+.players.active span:first-child {
     color: #56baed;
 }
-.players.active span:nth-child(2){
+
+.players.active span:nth-child(2) {
     color: #fff;
 }
-.players.active .slider{
-left: 50%;
 
+.players.active .slider {
+    left: 50%;
 }
-.play-board .player-area{
+
+.play-board .player-area {
     margin-top: 20px;
-
 }
-.play-board section{
+
+.play-board section {
     display: flex;
 }
-.play-board section span{
+
+.play-board section span {
     display: block;
     margin: 2px;
     height: 80px;
@@ -153,42 +163,44 @@ left: 50%;
     line-height: 80px;
     color: #56baed;
 }
-.result-box{
-    background:#c9d5e0; ;
+
+.result-box {
+    background: #c9d5e0;
     padding: 20px;
     border-radius: 5px;
     max-width: 350px;
     width: 100%;
-   opacity: 0;
+    opacity: 0;
     pointer-events: none;
-    transform: translate(-50%,-50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(0.9);
 }
-.result-box.show{
+
+.result-box.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translate(-50%,-50%) scale(1);
-    box-shadow: 45px 45px 45px -15px rgba(0,0,0,0.15),inset 15px 15px 10px rgba(255,255,255,0.75),-15px -15px 35px rgba(255,255,255,0.55),inset -2px -2px 15px rgba(0,0,0,0.2);
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 45px 45px 45px -15px rgba(0, 0, 0, 0.15), inset 15px 15px 10px rgba(255, 255, 255, 0.75), -15px -15px 35px rgba(255, 255, 255, 0.55), inset -2px -2px 15px rgba(0, 0, 0, 0.2);
 }
-    
 
-
-.result-box .won-text{
+.result-box .won-text {
     display: flex;
     font-size: 25px;
     font-weight: 500;
     justify-content: center;
 }
-.result-box .won-text p{
-font-weight: 800;
-margin: 0 9px;
 
+.result-box .won-text p {
+    font-weight: 800;
+    margin: 0 9px;
 }
-.result-box .btn{
+
+.result-box .btn {
     display: flex;
     margin-top: 20px;
     justify-content: center;
 }
-.result-box .btn button{
+
+.result-box .btn button {
     font-size: 18px;
     font-weight: 500;
     padding: 8px 20px;
@@ -198,11 +210,10 @@ margin: 0 9px;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-@media only screen and (max-width:600px){
-.select-box,.result-box{
-    max-width: 300px;
 }
 
+@media only screen and (max-width: 600px) {
+    .select-box, .result-box {
+        max-width: 300px;
+    }
 }
